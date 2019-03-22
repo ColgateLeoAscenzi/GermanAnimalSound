@@ -1,12 +1,8 @@
 
 
 $(document).ready(function() {
-    $(".li").click(function(event) {
-        var sound = new Howl({src: ['./sounds/'+this.attr("id")+'.mp3']}).play();
+    $("li").click(function(event) {
+        alert($(this).attr("id"));
+        var sound = new Howl({src: ['./sounds/'+$(this).attr("id")+'.mp3']}).play();
     });
-});
-
-
-$("#Cat").on("click",function(){
-	var sound = new Howl({src: ['./sounds/cat.mp3']}).play();
 });
