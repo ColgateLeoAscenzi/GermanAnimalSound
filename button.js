@@ -1,7 +1,9 @@
 
-$("#btn_off").on("click",function(){
-	$("#wrapper").hide("slow");
-	$("#btn_off").text("Ok... (refresh the page to get it again)");
+
+$(document).ready(function() {
+    $(".li").click(function(event) {
+        var sound = new Howl({src: ['./sounds/'+this.attr("id")+'.mp3']}).play();
+    });
 });
 
 
